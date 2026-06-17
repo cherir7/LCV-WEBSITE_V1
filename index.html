@@ -6,8 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LC Ventures</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
-
 <style>
 * {
     margin: 0;
@@ -112,80 +110,16 @@ body {
 }
 
 .logo {
-    position: relative;
-    display: inline-block;
+    width: min(58vw, 780px);
     margin-bottom: 42px;
-    cursor: default;
     transition: filter .35s ease;
+    cursor: default;
 }
 
 .logo:hover {
-    filter: drop-shadow(0 0 18px rgba(255,255,255,.35))
-            drop-shadow(0 0 46px rgba(255,255,255,.16));
-}
-
-.lcv {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(150px, 14vw, 290px);
-    font-weight: 300;
-    letter-spacing: -10px;
-    line-height: .8;
-    color: white;
-    text-shadow:
-        0 0 25px rgba(255,255,255,.08),
-        0 0 80px rgba(255,255,255,.03);
-    transition: text-shadow .35s ease, color .35s ease;
-}
-
-.logo:hover .lcv {
-    color: #ffffff;
-    text-shadow:
-        0 0 8px rgba(255,255,255,.45),
-        0 0 22px rgba(255,255,255,.30),
-        0 0 60px rgba(255,255,255,.18),
-        0 0 120px rgba(255,255,255,.10);
-}
-
-.entures {
-    position: absolute;
-    right: -20px;
-    bottom: 24px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(38px, 3.5vw, 78px);
-    font-weight: 300;
-    letter-spacing: -1px;
-    background:
-        linear-gradient(
-            180deg,
-            #ffffff 0%,
-            #bdbdbd 45%,
-            #707070 100%
-        );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: filter .35s ease, opacity .35s ease;
-}
-
-.logo:hover .entures {
-    filter: brightness(1.75) drop-shadow(0 0 18px rgba(255,255,255,.35));
-}
-
-.logo {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 42px;
-    cursor: default;
-}
-
-.logo:hover .lcv{
-    text-shadow:
-        0 0 15px rgba(255,255,255,.15),
-        0 0 35px rgba(255,255,255,.12),
-        0 0 70px rgba(255,255,255,.08);
-}
-
-.logo:hover .entures{
-    filter: brightness(1.2);
+    filter:
+        drop-shadow(0 0 16px rgba(255,255,255,.22))
+        drop-shadow(0 0 44px rgba(255,255,255,.14));
 }
 
 .tagline {
@@ -194,7 +128,6 @@ body {
     letter-spacing: 5.8px;
     text-transform: uppercase;
     transition: color .25s ease;
-    cursor: default;
 }
 
 .tagline:hover {
@@ -213,7 +146,6 @@ body {
     line-height: 2.9;
     animation: floatText 7s ease-in-out infinite;
     transition: color .25s ease;
-    cursor: default;
 }
 
 .left:hover,
@@ -254,13 +186,12 @@ body {
     line-height: 2.2;
 }
 
-.footer div{
+.footer div {
     transition: color .25s ease;
-    cursor: default;
 }
 
-.footer div:hover{
-    color:#ffffff;
+.footer div:hover {
+    color: #ffffff;
 }
 
 .footer a {
@@ -286,18 +217,8 @@ body {
     }
 
     .logo {
+        width: min(82vw, 520px);
         margin-bottom: 28px;
-    }
-
-    .lcv {
-        font-size: clamp(92px, 28vw, 130px);
-        letter-spacing: -5px;
-    }
-
-    .entures {
-        font-size: clamp(30px, 9vw, 44px);
-        right: -8px;
-        bottom: 10px;
     }
 
     .tagline {
@@ -341,10 +262,7 @@ body {
 
     <div class="center">
 
-        <div class="logo">
-            <div class="lcv">LCV</div>
-            <div class="entures">entures</div>
-        </div>
+        <img class="logo" src="lcventures_logo.svg" alt="LC Ventures Logo">
 
         <div class="tagline">
             Exploring what comes next.
