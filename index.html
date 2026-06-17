@@ -86,6 +86,7 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,6 +115,13 @@ body {
     position: relative;
     display: inline-block;
     margin-bottom: 42px;
+    cursor: default;
+    transition: filter .35s ease;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 18px rgba(255,255,255,.35))
+            drop-shadow(0 0 46px rgba(255,255,255,.16));
 }
 
 .lcv {
@@ -126,6 +134,16 @@ body {
     text-shadow:
         0 0 25px rgba(255,255,255,.08),
         0 0 80px rgba(255,255,255,.03);
+    transition: text-shadow .35s ease, color .35s ease;
+}
+
+.logo:hover .lcv {
+    color: #ffffff;
+    text-shadow:
+        0 0 8px rgba(255,255,255,.45),
+        0 0 22px rgba(255,255,255,.30),
+        0 0 60px rgba(255,255,255,.18),
+        0 0 120px rgba(255,255,255,.10);
 }
 
 .entures {
@@ -145,6 +163,29 @@ body {
         );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: filter .35s ease, opacity .35s ease;
+}
+
+.logo:hover .entures {
+    filter: brightness(1.75) drop-shadow(0 0 18px rgba(255,255,255,.35));
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 42px;
+    cursor: default;
+}
+
+.logo:hover .lcv{
+    text-shadow:
+        0 0 15px rgba(255,255,255,.15),
+        0 0 35px rgba(255,255,255,.12),
+        0 0 70px rgba(255,255,255,.08);
+}
+
+.logo:hover .entures{
+    filter: brightness(1.2);
 }
 
 .tagline {
@@ -152,6 +193,12 @@ body {
     font-size: 12px;
     letter-spacing: 5.8px;
     text-transform: uppercase;
+    transition: color .25s ease;
+    cursor: default;
+}
+
+.tagline:hover {
+    color: #ffffff;
 }
 
 .left,
@@ -165,6 +212,13 @@ body {
     text-transform: uppercase;
     line-height: 2.9;
     animation: floatText 7s ease-in-out infinite;
+    transition: color .25s ease;
+    cursor: default;
+}
+
+.left:hover,
+.right:hover {
+    color: #ffffff;
 }
 
 .left {
@@ -200,8 +254,13 @@ body {
     line-height: 2.2;
 }
 
-.footer div::before {
-    display: none;
+.footer div{
+    transition: color .25s ease;
+    cursor: default;
+}
+
+.footer div:hover{
+    color:#ffffff;
 }
 
 .footer a {
@@ -216,20 +275,9 @@ body {
     color: #ffffff;
 }
 
-@keyframes pulse {
-    0%, 100% {
-        opacity: .28;
-        transform: scale(.75);
-    }
-    50% {
-        opacity: .95;
-        transform: scale(1);
-    }
-}
-
 @media(max-width: 900px) {
     body {
-        overflow: auto;
+        overflow: hidden;
     }
 
     .left,
@@ -238,28 +286,37 @@ body {
     }
 
     .logo {
-        margin-bottom: 25px;
+        margin-bottom: 28px;
     }
 
     .lcv {
-        font-size: 120px;
-        letter-spacing: -6px;
+        font-size: clamp(92px, 28vw, 130px);
+        letter-spacing: -5px;
     }
 
     .entures {
-        font-size: 38px;
-        right: -10px;
-        bottom: 12px;
+        font-size: clamp(30px, 9vw, 44px);
+        right: -8px;
+        bottom: 10px;
     }
 
     .tagline {
-        font-size: 10px;
-        letter-spacing: 3px;
+        font-size: 9px;
+        letter-spacing: 2.5px;
+        padding: 0 20px;
     }
 
     .footer {
-        bottom: 42px;
-        font-size: 10px;
+        bottom: 36px;
+        font-size: 9px;
+        letter-spacing: 2px;
+        line-height: 2;
+    }
+
+    .glow {
+        width: 520px;
+        height: 520px;
+        filter: blur(90px);
     }
 }
 </style>
