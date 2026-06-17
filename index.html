@@ -190,16 +190,17 @@ body {
 
 .footer {
     position: absolute;
-    bottom: 60px;
+    bottom: 54px;
     width: 100%;
     text-align: center;
     color: #4f4f4f;
     font-size: 11px;
     letter-spacing: 3.2px;
     text-transform: uppercase;
+    line-height: 2.2;
 }
 
-.footer::before {
+.footer div::before {
     content: "";
     display: inline-block;
     width: 5px;
@@ -209,6 +210,18 @@ body {
     background: #777;
     vertical-align: middle;
     animation: pulse 2.4s ease-in-out infinite;
+}
+
+.footer a {
+    color: #6f6f6f;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    transition: color .25s ease;
+}
+
+.footer a:hover {
+    color: #ffffff;
 }
 
 @keyframes pulse {
@@ -299,7 +312,8 @@ body {
     </div>
 
     <div class="footer">
-        Future under construction
+        <div>Future under construction</div>
+        <a href="mailto:hello@lcv-usa.com">hello@lcv-usa.com</a>
     </div>
 
 </div>
