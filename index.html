@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LC Ventures</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
 * {
     margin: 0;
@@ -110,29 +112,40 @@ body {
 }
 
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    display: inline-block;
     margin-bottom: 42px;
 }
 
-.logo-img {
-    width: min(760px, 68vw);
-    height: auto;
-    display: block;
-    opacity: .96;
-    filter:
-        drop-shadow(0 0 18px rgba(255,255,255,.06))
-        drop-shadow(0 0 70px rgba(255,255,255,.025));
-    transition: filter .35s ease, opacity .35s ease, transform .35s ease;
+.lcv {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(150px, 14vw, 290px);
+    font-weight: 300;
+    letter-spacing: -10px;
+    line-height: .8;
+    color: white;
+    text-shadow:
+        0 0 25px rgba(255,255,255,.08),
+        0 0 80px rgba(255,255,255,.03);
 }
 
-.logo-img:hover {
-    opacity: 1;
-    filter:
-        drop-shadow(0 0 14px rgba(255,255,255,.28))
-        drop-shadow(0 0 38px rgba(255,255,255,.16))
-        drop-shadow(0 0 90px rgba(255,255,255,.08));
+.entures {
+    position: absolute;
+    right: -20px;
+    bottom: 24px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(38px, 3.5vw, 78px);
+    font-weight: 300;
+    letter-spacing: -1px;
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #bdbdbd 45%,
+            #707070 100%
+        );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .tagline {
@@ -140,12 +153,6 @@ body {
     font-size: 12px;
     letter-spacing: 5.8px;
     text-transform: uppercase;
-    transition: color .25s ease;
-    cursor: default;
-}
-
-.tagline:hover {
-    color: #ffffff;
 }
 
 .left,
@@ -159,13 +166,6 @@ body {
     text-transform: uppercase;
     line-height: 2.9;
     animation: floatText 7s ease-in-out infinite;
-    transition: color .25s ease;
-    cursor: default;
-}
-
-.left:hover,
-.right:hover {
-    color: #ffffff;
 }
 
 .left {
@@ -201,15 +201,6 @@ body {
     line-height: 2.2;
 }
 
-.footer div {
-    transition: color .25s ease;
-    cursor: default;
-}
-
-.footer div:hover {
-    color: #ffffff;
-}
-
 .footer a {
     color: #6f6f6f;
     text-decoration: none;
@@ -223,11 +214,8 @@ body {
 }
 
 @media(max-width: 900px) {
-    html,
     body {
-        width: 100%;
-        overflow-x: hidden;
-        overflow-y: hidden;
+        overflow: hidden;
     }
 
     .left,
@@ -235,18 +223,19 @@ body {
         display: none;
     }
 
-    .container {
-        width: 100%;
-        height: 100dvh;
-        overflow: hidden;
-    }
-
     .logo {
         margin-bottom: 28px;
     }
 
-    .logo-img {
-        width: 82vw;
+    .lcv {
+        font-size: clamp(92px, 28vw, 130px);
+        letter-spacing: -5px;
+    }
+
+    .entures {
+        font-size: clamp(30px, 9vw, 44px);
+        right: -8px;
+        bottom: 10px;
     }
 
     .tagline {
@@ -291,7 +280,8 @@ body {
     <div class="center">
 
         <div class="logo">
-            <img src="LCVlogo_white.svg" class="logo-img" alt="LC Ventures">
+            <div class="lcv">LCV</div>
+            <div class="entures">entures</div>
         </div>
 
         <div class="tagline">
