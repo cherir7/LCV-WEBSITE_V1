@@ -110,16 +110,29 @@ body {
 }
 
 .logo {
-    width: min(58vw, 780px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 42px;
-    transition: filter .35s ease;
-    cursor: default;
 }
 
-.logo:hover {
+.logo-img {
+    width: min(760px, 68vw);
+    height: auto;
+    display: block;
+    opacity: .96;
     filter:
-        drop-shadow(0 0 16px rgba(255,255,255,.22))
-        drop-shadow(0 0 44px rgba(255,255,255,.14));
+        drop-shadow(0 0 18px rgba(255,255,255,.06))
+        drop-shadow(0 0 70px rgba(255,255,255,.025));
+    transition: filter .35s ease, opacity .35s ease, transform .35s ease;
+}
+
+.logo-img:hover {
+    opacity: 1;
+    filter:
+        drop-shadow(0 0 14px rgba(255,255,255,.28))
+        drop-shadow(0 0 38px rgba(255,255,255,.16))
+        drop-shadow(0 0 90px rgba(255,255,255,.08));
 }
 
 .tagline {
@@ -128,6 +141,7 @@ body {
     letter-spacing: 5.8px;
     text-transform: uppercase;
     transition: color .25s ease;
+    cursor: default;
 }
 
 .tagline:hover {
@@ -146,6 +160,7 @@ body {
     line-height: 2.9;
     animation: floatText 7s ease-in-out infinite;
     transition: color .25s ease;
+    cursor: default;
 }
 
 .left:hover,
@@ -188,6 +203,7 @@ body {
 
 .footer div {
     transition: color .25s ease;
+    cursor: default;
 }
 
 .footer div:hover {
@@ -227,19 +243,10 @@ body {
 
     .logo {
         margin-bottom: 28px;
-        transform: scale(0.92);
-        transform-origin: center;
     }
 
-    .lcv {
-        font-size: clamp(92px, 26vw, 122px);
-        letter-spacing: -5px;
-    }
-
-    .entures {
-        font-size: clamp(28px, 8vw, 40px);
-        right: -14px;
-        bottom: 10px;
+    .logo-img {
+        width: 82vw;
     }
 
     .tagline {
@@ -283,7 +290,9 @@ body {
 
     <div class="center">
 
-        <img class="logo" src="lcventures_logo.svg" alt="LC Ventures Logo">
+        <div class="logo">
+            <img src="LCVlogo_white.svg" class="logo-img" alt="LC Ventures">
+        </div>
 
         <div class="tagline">
             Exploring what comes next.
